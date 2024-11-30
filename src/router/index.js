@@ -5,6 +5,7 @@ import MealsByLetter from "../views/MealsByLetter.vue";
 import MealsByIngredient from "../views/MealsByIngredients.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import GuestLayout from "../components/GuestLayout.vue";
+import MealDetail from "../views/MealDetail.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -33,6 +34,16 @@ const router = createRouter({
           name: "byIngredient",
           component: MealsByIngredient,
         },
+        {
+          path: "/meal/:id",
+          name: "mealDetail",
+          component: MealDetail
+        },
+        {
+          path: "/:catchAll(.*)",
+          name: "notFound",
+          component: () => import("../views/NotFound.vue"),
+        }
       ]
     },
     {
