@@ -26,7 +26,7 @@
           <router-link :to="{name : 'byLetter'}" class="text-gray-100 cursor-pointer hover:text-orange-400">Meals By Letter</router-link>
         </li>
         <li>
-          <router-link :to="{name : 'byIngredient'}" class="text-gray-100 cursor-pointer hover:text-orange-400">Meals By ingredients</router-link>
+          <router-link :to="{name : 'ingredients'}" class="text-gray-100 cursor-pointer hover:text-orange-400">Meals By ingredients</router-link>
         </li>
       </ul>
 

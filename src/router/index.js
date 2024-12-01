@@ -2,10 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import MealsByName from "../views/MealsByName.vue";
 import MealsByLetter from "../views/MealsByLetter.vue";
-import MealsByIngredient from "../views/MealsByIngredients.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import GuestLayout from "../components/GuestLayout.vue";
 import MealDetail from "../views/MealDetail.vue";
+import Ingredients from "../views/Ingredients.vue";
+import MealsByIngredients from "../views/MealsByIngredients.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -30,9 +31,14 @@ const router = createRouter({
           component: MealsByLetter,
         },
         {
-          path: "/by-ingredient/:ingredient?",
+          path: "/ingredients",
+          name: "ingredients",
+          component: Ingredients,
+        },
+        {
+          path: "/by-ingredient/:ingredient",
           name: "byIngredient",
-          component: MealsByIngredient,
+          component: MealsByIngredients,
         },
         {
           path: "/meal/:id",
